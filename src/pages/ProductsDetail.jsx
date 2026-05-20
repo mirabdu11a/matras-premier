@@ -5,7 +5,9 @@ import Navbar from '../components/Navbar'
 export default function ProductsDetail() {
   return (
     <>
-      <Navbar/>
+      <header className='DetailHeader'>
+        <Navbar/>
+      </header>
       <ProductDetailBody/>
     </>
   )
