@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import ProductsList from './pages/ProductsList'
 import ProductsDetail from './pages/ProductsDetail'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path='/contact' element={<Contact  />} />
         <Route path='/products-list' element={<ProductsList  />} />
         <Route path='/products-detail' element={<ProductsDetail  />} />
+        <Route path='/products/:id' element={<ProductsDetail  />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer/>
     </>
