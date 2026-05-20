@@ -1,20 +1,27 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 import logo from '../assets/logo.svg'
 import languageIcon from '../assets/global-line.svg'
 import tochka from '../assets/tochka.svg'
-import arrow from '../assets/button-arrow.svg'
-import download from '../assets/download.svg'
 import { NavLink } from 'react-router-dom'
+import { LANG_KEY } from '../locale'
+
+function onLangChange(i18n, e) {
+  const lang = e.target.value
+  i18n.changeLanguage(lang)
+  localStorage.setItem(LANG_KEY, lang)
+}
 
 export default function Navbar() {
+  const { i18n } = useTranslation()
+
   return (
-    <nav className='Navbar'>
+    <nav className='nav-bar'>
       <div className="container">
         <div className="nav-body">
           <div className='block1'>
             <img src={logo} alt="Matras Premier logo" />
             <ul>
-              <li><NavLink to="/">Bosh safiha</NavLink></li>
+              <li><NavLink to="/">Bosh sahifa</NavLink></li>
               <li><NavLink to="/products">Mahsulotlar</NavLink></li>
               <li><NavLink to="/about">Biz haqimizda</NavLink></li>
               <li><NavLink to="/contact">Kontaktlar</NavLink></li>
@@ -24,9 +31,9 @@ export default function Navbar() {
           <div className='block2'>
             <div className='rectangle gap'>
               <img src={languageIcon} alt="icon" />
-              <select name="" id="">
-                <option value="">UZ</option>
-                <option value="">RU</option>
+              <select name="language" id="language" value={i18n.language} onChange={(e) => onLangChange(i18n, e)}>
+                <option value="uz">UZ</option>
+                <option value="ru">RU</option>
               </select>
             </div>
 
@@ -38,7 +45,6 @@ export default function Navbar() {
             </div>
 
             <button>Buyurtma berish</button>
-
           </div>
         </div>
       </div>
