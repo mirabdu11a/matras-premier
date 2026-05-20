@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ProductDetailBody from '../components/ProductDetailBody'
 import Navbar from '../components/Navbar'
 
