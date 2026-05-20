@@ -80,7 +80,7 @@ export default function ProductDetailBody() {
             </div>
 
             <div className="col-md-5 form-block">
-              <div>
+              <div className="detail-form">
                 <h2>{name}</h2>
 
                 <h3 dangerouslySetInnerHTML={{ __html: desc }} />
