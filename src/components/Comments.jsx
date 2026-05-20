@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,36 +8,15 @@ import 'swiper/css/navigation';
 import stars from '../assets/stars.svg';
 import personImg from '../assets/peson.svg';
 
-const commentsData = [
-  {
-    id: 1,
-    name: "Azizbek Karimov",
-    text: "Matras juda qulay ekan, birinchi kechadanoq farqni sezdim. Oldin belim og‘rirdi, hozir ancha yengillik bor. Yetkazib berish ham tez va xizmat yaxshi. Tavsiya qilaman"
-  },
-  {
-    id: 2,
-    name: "Sherzod Akbarov",
-    text: "Narxiga nisbatan sifati juda yaxshi. 2 haftadan beri ishlatyapman, uyqu sifatim ancha yaxshilandi. Yetkazib berish tez, xizmat ham professional"
-  },
-  {
-    id: 3,
-    name: "Dilnoza Rahimova",
-    text: "Memory matras oldim va juda mamnunman. Juda yumshoq, lekin tanani yaxshi ushlab turadi. Konsultatsiya ham foydali bo‘ldi, to‘g‘ri tanlashga yordam berishdi"
-  },
-  {
-    id: 4,
-    name: "Dilnoza Rahimova",
-    text: "Memory matras oldim va juda mamnunman. Juda yumshoq, lekin tanani yaxshi ushlab turadi. Konsultatsiya ham foydali bo‘ldi, to‘g‘ri tanlashga yordam berishdi"
-  },
-  // Bu yerga yana ko'proq fikrlar qo'shishingiz mumkin
-];
-
 export default function Comments() {
+  const { t } = useTranslation()
+  const commentsData = t('comments.items', { returnObjects: true })
+
   return (
     <section className='Comments'>
       <div className="container">
-        <h2>Biz haqimizda mijozlar fikri</h2>
-        
+        <h2>{t('comments.title')}</h2>
+
         <div className="slider-wrapper">
           <Swiper
             modules={[Navigation]}
@@ -52,7 +31,7 @@ export default function Comments() {
               1024: { slidesPerView: 3 },
             }}
           >
-            {commentsData.map((item) => (
+            {Array.isArray(commentsData) && commentsData.map((item) => (
               <SwiperSlide className='block' key={item.id}>
                 <div className="person-card">
                   <div className='person-info'>
@@ -68,7 +47,6 @@ export default function Comments() {
             ))}
           </Swiper>
 
-          {/* Navigatsiya tugmalari (Rasmda pastda joylashgan) */}
           <div className="slider-controls">
             <button className="swiper-button-prev-custom">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

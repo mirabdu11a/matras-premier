@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export default function ProductCard({ product }) {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const lang = i18n.language === 'ru' ? 'ru' : 'uz'
   const name = product[`name_${lang}`] || product.name_uz
   const desc = product[`description_${lang}`] || product.description_uz
@@ -16,9 +16,9 @@ export default function ProductCard({ product }) {
           <p dangerouslySetInnerHTML={{ __html: desc }} />
           <div className="d-flex">
             {product.in_stock && (
-              <div className="nalichi">В наличии</div>
+              <div className="nalichi">{t('common.inStock')}</div>
             )}
-            <Link to={`/products/${product.id}`} className="batafsil-btn">Batafsil</Link>
+            <Link to={`/products/${product.id}`} className="batafsil-btn">{t('btn.details')}</Link>
           </div>
         </div>
       </div>

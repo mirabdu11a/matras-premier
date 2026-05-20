@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { post } from '../api/client'
 import { ENDPOINTS } from '../api/endpoints'
 
 export default function LeadForm({ source = 'contact', productId = null, withMessage = false }) {
+  const { t } = useTranslation()
   const [form, setForm] = useState({ name: '', phone: '', message: '' })
   const [status, setStatus] = useState('idle') // idle | sending | success | error
 
@@ -28,26 +30,26 @@ export default function LeadForm({ source = 'contact', productId = null, withMes
   }
 
   if (status === 'success') {
-    return <p className="lead-success">Rahmat! Tez orada siz bilan bog&apos;lanamiz.</p>
+    return <p className="lead-success">{t('form.successMessage')}</p>
   }
 
   return (
     <form onSubmit={submit}>
       <div className="d-flex">
-        <label className="visually-hidden" htmlFor={`name-${source}`}>Ism</label>
-        <input id={`name-${source}`} name="name" type="text" placeholder="Ismingiz"
+        <label className="visually-hidden" htmlFor={`name-${source}`}>{t('form.nameLabel')}</label>
+        <input id={`name-${source}`} name="name" type="text" placeholder={t('form.namePlaceholder')}
                value={form.name} onChange={change} required />
-        <label className="visually-hidden" htmlFor={`phone-${source}`}>Telefon</label>
-        <input id={`phone-${source}`} name="phone" type="tel" placeholder="Telefon raqamingiz"
+        <label className="visually-hidden" htmlFor={`phone-${source}`}>{t('form.phoneLabel')}</label>
+        <input id={`phone-${source}`} name="phone" type="tel" placeholder={t('form.phonePlaceholder')}
                value={form.phone} onChange={change} required />
         {withMessage && (
-          <textarea name="message" placeholder="Xabar" value={form.message} onChange={change} />
+          <textarea name="message" placeholder={t('form.messagePlaceholder')} value={form.message} onChange={change} />
         )}
         <button type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? 'Yuborilmoqda...' : 'Ariza yuborish'}
+          {status === 'sending' ? t('btn.submitting') : t('btn.submit')}
         </button>
       </div>
-      {status === 'error' && <p className="lead-error">Ism va to&apos;g&apos;ri telefon kiriting.</p>}
+      {status === 'error' && <p className="lead-error">{t('form.errorMessage')}</p>}
     </form>
   )
 }

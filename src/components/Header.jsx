@@ -14,11 +14,11 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 header-info__block">
-              <h2 className='header-title'>Sog'lom uyqu — to'g'ri tanlangan matrasdan boshlanadi</h2>
-              <p>Tanangizga moslashadigan texnologiyalar va yuqori sifatli materiallar bilan haqiqiy komfortni his qiling</p>
+              <h2 className='header-title'>{t('header.title')}</h2>
+              <p>{t('header.subtitle')}</p>
               <div className="header-buttons">
-                <button className='first-button'>{t('home')} <img src={arrow} alt="arrow" /></button>
-                <button className='second-button'>Katalogni yuklash <img src={download} alt="download" /></button>
+                <button className='first-button'>{t('header.ctaPrimary')} <img src={arrow} alt="arrow" /></button>
+                <button className='second-button'>{t('btn.downloadCatalog')} <img src={download} alt="download" /></button>
               </div>
             </div>
           </div>

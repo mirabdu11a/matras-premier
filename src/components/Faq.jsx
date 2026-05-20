@@ -1,28 +1,11 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Faq() {
+  const { t } = useTranslation()
   const [activeIndex, setActiveIndex] = useState(1)
 
-  const faqData = [
-    {
-      id: 1,
-      question: 'Yetkazib berish qancha vaqt oladi?',
-      answer:
-        'Yetkazib berish hududga qarab 1–3 ish kuni davom etadi.',
-    },
-    {
-      id: 2,
-      question: 'Mahsulotlar qanday qadoqlanadi?',
-      answer:
-        'Har bir mahsulot transport uchun maxsus himoyalangan qadoqda yetkaziladi',
-    },
-    {
-      id: 3,
-      question: 'Boshqa shaharga yetkazib berish mumkinmi?',
-      answer:
-        'Ha, biz O‘zbekistonning barcha hududlariga yetkazib beramiz.',
-    },
-  ]
+  const faqData = t('faq.items', { returnObjects: true })
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
@@ -31,10 +14,10 @@ export default function Faq() {
   return (
     <section className='Faq'>
       <div className='container'>
-        <h2>Ko‘p beriladigan savollar</h2>
+        <h2>{t('faq.title')}</h2>
 
         <div className='faq-wrapper'>
-          {faqData.map((item, index) => (
+          {Array.isArray(faqData) && faqData.map((item, index) => (
             <div
               key={item.id}
               className={`faq-item ${

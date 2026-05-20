@@ -12,7 +12,7 @@ function onLangChange(i18n, e) {
 }
 
 export default function Navbar() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <nav className='nav-bar'>
@@ -21,10 +21,10 @@ export default function Navbar() {
           <div className='block1'>
             <img src={logo} alt="Matras Premier logo" />
             <ul>
-              <li><NavLink to="/">Bosh sahifa</NavLink></li>
-              <li><NavLink to="/products">Mahsulotlar</NavLink></li>
-              <li><NavLink to="/about">Biz haqimizda</NavLink></li>
-              <li><NavLink to="/contact">Kontaktlar</NavLink></li>
+              <li><NavLink to="/">{t('nav.home')}</NavLink></li>
+              <li><NavLink to="/products">{t('nav.products')}</NavLink></li>
+              <li><NavLink to="/about">{t('nav.about')}</NavLink></li>
+              <li><NavLink to="/contact">{t('nav.contact')}</NavLink></li>
             </ul>
           </div>
 
@@ -40,11 +40,11 @@ export default function Navbar() {
             <div>
               <a href="tel:+998940644444">+998 (94) 064 44 44</a>
               <div className='rectangle'>
-                <img src={tochka} alt="icon" /><span> 5 yil garantiya</span>
+                <img src={tochka} alt="icon" /><span> {t('nav.warranty')}</span>
               </div>
             </div>
 
-            <button>Buyurtma berish</button>
+            <button>{t('btn.order')}</button>
           </div>
         </div>
       </div>

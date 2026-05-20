@@ -4,18 +4,18 @@ import { useFetch } from '../api/hooks'
 import { ENDPOINTS } from '../api/endpoints'
 
 export default function CatalogSection() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const lang = i18n.language === 'ru' ? 'ru' : 'uz'
   const { data: categories, loading, error } = useFetch(ENDPOINTS.categories)
 
   return (
     <section className='CatalogSection'>
       <div className="container">
-        <h2 className='section-title'>Mahsulotlar katalogi</h2>
+        <h2 className='section-title'>{t('catalog.title')}</h2>
         <div className="row">
-          {loading && <p>Yuklanmoqda...</p>}
-          {error && <p>Xatolik yuz berdi. Qayta urinib ko&apos;ring.</p>}
-          {!loading && !error && categories?.length === 0 && <p>Kategoriyalar topilmadi.</p>}
+          {loading && <p>{t('common.loading')}</p>}
+          {error && <p>{t('common.error')}</p>}
+          {!loading && !error && categories?.length === 0 && <p>{t('common.emptyCategories')}</p>}
           {!loading && !error && categories?.map((category) => (
             <div key={category.id} className="col-md-4">
               <div className="card1" style={category.image ? { backgroundImage: `url(${category.image})` } : {}}>
