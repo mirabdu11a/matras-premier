@@ -23,7 +23,7 @@ const translationUz = {
     inStock: "Sotuvda bor",
     privacyNote: "Ma'lumotlaringiz xavfsiz saqlanadi va uchinchi shaxslarga berilmaydi",
     privacyConsent: "Shaxsiy ma'lumotlarimni qayta ishlash shartlariga roziman",
-    copyright: "© 2026 Matras Premier. Barcha huquqlar himoyalangan",
+    copyright: "© {{year}} Matras Premier. Barcha huquqlar himoyalangan",
     devCredit: "Разработка и реклама",
   },
   breadcrumb: {

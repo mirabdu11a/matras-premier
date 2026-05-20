@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-bottom">
-            <div className='b1'>{t('common.copyright')}</div>
+            <div className='b1'>{t('common.copyright', { year: new Date().getFullYear() })}</div>
             <div className='b2'>{t('common.devCredit')} <a target='_blank' href="https://www.web-marketing.uz/"> WEB MARKETING</a></div>
           </div>
         </div>

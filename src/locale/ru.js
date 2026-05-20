@@ -23,7 +23,7 @@ const translationRu = {
     inStock: "В наличии",
     privacyNote: "Ваши данные надёжно защищены и не передаются третьим лицам",
     privacyConsent: "Я согласен на обработку персональных данных",
-    copyright: "© 2026 Matras Premier. Все права защищены",
+    copyright: "© {{year}} Matras Premier. Все права защищены",
     devCredit: "Разработка и реклама",
   },
   breadcrumb: {
