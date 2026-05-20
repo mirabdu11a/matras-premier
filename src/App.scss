@@ -2302,6 +2302,58 @@ padding-top: 18px;
         }
       }
     }
-    
+
   }
+}
+
+// ProductCard price display
+.price {
+  font-family: "Golos Text";
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-icon-primary, #323232);
+  margin-bottom: 8px;
+
+  .old {
+    text-decoration: line-through;
+    color: var(--text-icon-secondary, #7C7C7C);
+    font-weight: 400;
+  }
+}
+
+// Batafsil link styled like the product-card button
+a.batafsil-btn {
+  display: flex;
+  height: 42px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--bg-tertiary, #F1F1F1);
+  color: var(--text-icon-primary, #323232);
+  font-family: "Golos Text";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--bg-secondary, #E8E8E8);
+    color: var(--text-icon-primary, #323232);
+  }
+}
+
+// Accessibility utility
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
