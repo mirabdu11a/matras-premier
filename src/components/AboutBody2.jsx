@@ -1,4 +1,4 @@
-import React from 'react'
+
 import p1 from '../assets/images/about1.webp'
 import p2 from '../assets/images/about2.webp'
 

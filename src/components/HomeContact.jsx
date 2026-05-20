@@ -1,4 +1,4 @@
-import React from 'react'
+
 import YandexMap from './YandexMap'
 import watsap from '../assets/f-watsap.svg'
 import tg from '../assets/f-tg.svg'

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Header from '../components/Header'
 import CatalogSection from '../components/CatalogSection'
 import PopularProducts from '../components/PopularProducts'

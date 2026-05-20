@@ -1,4 +1,4 @@
-import React from 'react'
+
 import logo from '../assets/footerLogo.svg'
 import { NavLink } from 'react-router-dom'
 import watsap from '../assets/f-watsap.svg'

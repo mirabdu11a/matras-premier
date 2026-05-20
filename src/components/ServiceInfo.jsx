@@ -1,4 +1,4 @@
-import React from 'react'
+
 import img1 from '../assets/images/service.webp'
 
 export default function ServiceInfo() {
