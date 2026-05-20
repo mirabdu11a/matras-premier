@@ -1,4 +1,4 @@
-import React from 'react'
+import LeadForm from './LeadForm'
 
 export default function Order() {
   return (
@@ -9,12 +9,8 @@ export default function Order() {
             <h2>Sizga mos matrasni tanlashda yordam beramiz</h2>
           </div>
           <div className='input-body'>
-            <div className='d-flex'>
-              <input type="text" placeholder='Ismingiz' />
-              <input type="text" placeholder='Telefon raqamingiz'/>
-              <button>Ariza yuborish</button>
-            </div>
-            <p>Ma’lumotlaringiz xavfsiz saqlanadi va uchinchi shaxslarga berilmaydi</p>
+            <LeadForm source="order" />
+            <p>Ma&apos;lumotlaringiz xavfsiz saqlanadi va uchinchi shaxslarga berilmaydi</p>
           </div>
         </div>
       </div>
