@@ -85,15 +85,6 @@ export default function ProductDetailBody() {
 
                 <h3 dangerouslySetInnerHTML={{ __html: desc }} />
 
-                {product.price > 0 && (
-                  <div className="price">
-                    {Number(product.price).toLocaleString('ru-RU')} so&apos;m
-                    {product.old_price && (
-                      <span className="old"> {Number(product.old_price).toLocaleString('ru-RU')} so&apos;m</span>
-                    )}
-                  </div>
-                )}
-
                 {product.in_stock && (
                   <div className="nalichi">В наличии</div>
                 )}

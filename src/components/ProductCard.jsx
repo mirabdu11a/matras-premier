@@ -14,14 +14,6 @@ export default function ProductCard({ product }) {
         <div className="card-body">
           <h4>{name}</h4>
           <p dangerouslySetInnerHTML={{ __html: desc }} />
-          {product.price > 0 && (
-            <div className="price">
-              {Number(product.price).toLocaleString('ru-RU')} so&apos;m
-              {product.old_price && (
-                <span className="old"> {Number(product.old_price).toLocaleString('ru-RU')} so&apos;m</span>
-              )}
-            </div>
-          )}
           <div className="d-flex">
             {product.in_stock && (
               <div className="nalichi">В наличии</div>

@@ -2306,21 +2306,6 @@ padding-top: 18px;
   }
 }
 
-// ProductCard price display
-.price {
-  font-family: "Golos Text";
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-icon-primary, #323232);
-  margin-bottom: 8px;
-
-  .old {
-    text-decoration: line-through;
-    color: var(--text-icon-secondary, #7C7C7C);
-    font-weight: 400;
-  }
-}
-
 // Batafsil link styled like the product-card button
 a.batafsil-btn {
   display: flex;
