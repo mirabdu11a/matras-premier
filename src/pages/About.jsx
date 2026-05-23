@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AboutHeader from '../components/AboutHeader'
 import AboutBody from '../components/AboutBody'
 import AboutBody2 from '../components/AboutBody2'

@@ -1,28 +1,25 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 import watsap from '../assets/f-watsap.svg'
 import tg from '../assets/f-tg.svg'
 import call from '../assets/f-call.svg'
+import LeadForm from './LeadForm'
 
 export default function ContactBody() {
+  const { t } = useTranslation()
+
   return (
     <section className='ContactBody'>
       <div className="formBlock">
-        <form action="">
-          <h2>Bizga yozing</h2>
-          <h3>Formani to‘ldiring — mutaxassisimiz siz bilan tez orada bog‘lanib, barcha savollaringizga javob beradi.</h3>
-          <div className='inputs-block'>
-            <input type="text" placeholder='Ismingiz' />
-            <input type="text" placeholder='Telefon raqamingiz'/>
-          </div>
-          <textarea name="" placeholder='Savolingiz yoki izoh' id=""></textarea>
-          <button>Yuborish</button>
-          <p >Shaxsiy ma’lumotlarimni qayta ishlash shartlariga roziman</p>
-        </form>
-
+        <div>
+          <h2>{t('contact.writeUs')}</h2>
+          <h3>{t('contact.formSubtitle')}</h3>
+          <LeadForm source="contact" withMessage />
+          <p>{t('common.privacyConsent')}</p>
+        </div>
       </div>
       <div className='HomeContactBody'>
         <div className="contact-info">
-          <h2>Kontakt ma’lumotlari</h2>
+          <h2>{t('contact.title')}</h2>
           <li className='phone'><a href="tel:+998940644444">+998 94 064 44 44</a></li>
           <li className='phone'><a href="tel:+998773774545">+998 77 377 45 45</a></li>
           <ul>
@@ -32,13 +29,13 @@ export default function ContactBody() {
           </ul>
 
           <div className="filials">
-            <h5>Olim polvon filiya</h5>
-            <h5>Maxtumquli filal</h5>
-            <p>Du–Ju: 09:00 – 19:00, Sh–Ya: 10:00 – 18:00</p>
-            <button>Bog‘lanish</button>
+            <h5>{t('contact.filial1')}</h5>
+            <h5>{t('contact.filial2')}</h5>
+            <p>{t('contact.workHours')}</p>
+            <button>{t('btn.connect')}</button>
           </div>
         </div>
-    </div>
+      </div>
     </section>
   )
 }
