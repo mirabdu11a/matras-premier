@@ -481,6 +481,11 @@ body{
 } 
 
 .CatalogSection{
+  .card1-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
   display: flex;
   padding: 64px 0;
   flex-direction: column;
@@ -4189,4 +4194,184 @@ a.batafsil-btn {
   }
 }
 
+}
+/* ---------- Responsive: global ---------- */
+@media (max-width: 992px) {
+  .section-title { font-size: 36px; }
+}
+@media (max-width: 768px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .section-title { font-size: 30px; }
+}
+@media (max-width: 576px) {
+  .container { padding-left: 12px; padding-right: 12px; }
+  .section-title { font-size: 24px; }
+}
+
+/* ---------- Responsive: Header + Navbar ---------- */
+@media (max-width: 992px) {
+  .Header {
+    .header-title, h1 { font-size: 40px; line-height: 1.2; }
+  }
+  .Navbar { padding-top: 12px; padding-bottom: 12px; }
+}
+@media (max-width: 768px) {
+  .Header {
+    .header-title, h1 { font-size: 32px; }
+    p { font-size: 14px; }
+  }
+  .Navbar {
+    .logo img { height: 32px; }
+  }
+}
+@media (max-width: 576px) {
+  .Header {
+    .header-title, h1 { font-size: 26px; }
+    .Header-buttons, .ctaPrimary { width: 100%; }
+  }
+  .Navbar {
+    .logo img { height: 28px; }
+  }
+}
+
+/* ---------- Responsive: CatalogSection ---------- */
+@media (max-width: 992px) {
+  .CatalogSection .col-md-4 { flex: 0 0 50%; max-width: 50%; }
+}
+@media (max-width: 576px) {
+  .CatalogSection {
+    .col-md-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 16px; }
+    .card1 { min-height: 220px; }
+    .card1 .card-info h3 { font-size: 20px; }
+  }
+}
+
+/* ---------- Responsive: PopularProducts + ProductsCards ---------- */
+@media (max-width: 1200px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 33.333%; max-width: 33.333%; }
+}
+@media (max-width: 992px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 50%; max-width: 50%; }
+}
+@media (max-width: 576px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 100%; max-width: 100%; }
+  .product-card { margin-bottom: 16px; }
+  .ProductsCards .navigation { flex-wrap: wrap; }
+  .ProductsCards .navigation h5,
+  .ProductsCards .navigation p { font-size: 14px; }
+}
+
+/* ---------- Responsive: ProductDetailBody ---------- */
+@media (max-width: 992px) {
+  .ProductDetailBody {
+    .row { flex-direction: column; }
+    .col-md-7, .col-md-5 { flex: 0 0 100%; max-width: 100%; }
+    .thumbnail-wrapper .thumb-item img { width: 64px; height: 64px; }
+  }
+  .product-description h2 { font-size: 28px; }
+}
+@media (max-width: 576px) {
+  .ProductDetailBody {
+    .main-image-block .main-img { width: 100%; height: auto; }
+    .thumbnail-wrapper { gap: 8px; }
+    .thumbnail-wrapper .thumb-item img { width: 56px; height: 56px; }
+  }
+  .product-description {
+    h2 { font-size: 22px; }
+    p, li { font-size: 14px; }
+  }
+}
+
+/* ---------- Responsive: About / Contact / Info ---------- */
+@media (max-width: 992px) {
+  .AboutBody, .AboutBody2, .ContactBody, .HomeContact, .ServiceInfo {
+    .row { flex-direction: column; }
+    .col-md-6, .col-md-4, .col-md-5, .col-md-7 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    img { max-width: 100%; height: auto; }
+  }
+  .YandexMap, .YandexMapContact { width: 100%; height: 320px; }
+}
+@media (max-width: 576px) {
+  .AboutHeader h1, .ContactHeader h1, .AboutBody h2, .AboutBody2 h2,
+  .ContactBody h2, .ServiceInfo h2 { font-size: 24px; }
+  .AboutBody p, .AboutBody2 p, .ContactBody p, .ServiceInfo p { font-size: 14px; }
+  .YandexMap, .YandexMapContact { height: 260px; }
+}
+
+/* ---------- Responsive: Forms ---------- */
+@media (max-width: 768px) {
+  .Order, .ConsultationSetion {
+    .row { flex-direction: column; }
+    .col-md-6, .col-md-7, .col-md-5 { flex: 0 0 100%; max-width: 100%; }
+    form { width: 100%; }
+    input, textarea, button { width: 100%; }
+    h2 { font-size: 26px; }
+  }
+}
+@media (max-width: 576px) {
+  .Order, .ConsultationSetion {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    h2 { font-size: 22px; }
+    p { font-size: 14px; }
+  }
+}
+
+/* ---------- Responsive: Faq + Comments ---------- */
+@media (max-width: 768px) {
+  .Faq {
+    .faq-item { padding: 12px 16px; }
+    .faq-header h3, .faq-content p { font-size: 14px; }
+  }
+  .Comments {
+    .swiper-slide, .person-card { width: 100% !important; }
+    .person-card { padding: 16px; }
+    .person-card .comment, .person-card p { font-size: 14px; }
+  }
+}
+@media (max-width: 576px) {
+  .Faq h2, .Comments h2 { font-size: 22px; }
+}
+
+/* ---------- Responsive: Footer ---------- */
+@media (max-width: 992px) {
+  .Footer {
+    .footer-body { gap: 32px; }
+    .b2 .d-flex { flex-wrap: wrap; gap: 24px; }
+    .footer-links { flex: 0 0 45%; }
+  }
+}
+@media (max-width: 768px) {
+  .Footer {
+    .footer-body { flex-direction: column; align-items: flex-start; }
+    .b2 .d-flex { flex-direction: column; gap: 20px; }
+    .b2__b2 { width: 100%; align-items: flex-start; }
+    .footer-socials { justify-content: flex-start; }
+  }
+}
+@media (max-width: 576px) {
+  .Footer {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    .footer-bottom { flex-direction: column; gap: 8px; font-size: 12px; }
+    .circle1, .circle2 { display: none; }
+    .f-number { font-size: 18px; }
+  }
+}
+
+/* ---------- Responsive: scroll-top-btn + Order section ---------- */
+@media (max-width: 576px) {
+  .scroll-top-btn {
+    right: 12px;
+    bottom: 16px;
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
 }
