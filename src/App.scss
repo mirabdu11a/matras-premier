@@ -4263,3 +4263,24 @@ a.batafsil-btn {
   .ProductsCards .navigation h5,
   .ProductsCards .navigation p { font-size: 14px; }
 }
+
+/* ---------- Responsive: ProductDetailBody ---------- */
+@media (max-width: 992px) {
+  .ProductDetailBody {
+    .row { flex-direction: column; }
+    .col-md-7, .col-md-5 { flex: 0 0 100%; max-width: 100%; }
+    .thumbnail-wrapper .thumb-item img { width: 64px; height: 64px; }
+  }
+  .product-description h2 { font-size: 28px; }
+}
+@media (max-width: 576px) {
+  .ProductDetailBody {
+    .main-image-block .main-img { width: 100%; height: auto; }
+    .thumbnail-wrapper { gap: 8px; }
+    .thumbnail-wrapper .thumb-item img { width: 56px; height: 56px; }
+  }
+  .product-description {
+    h2 { font-size: 22px; }
+    p, li { font-size: 14px; }
+  }
+}
