@@ -4365,3 +4365,13 @@ a.batafsil-btn {
     .f-number { font-size: 18px; }
   }
 }
+
+/* ---------- Responsive: scroll-top-btn + Order section ---------- */
+@media (max-width: 576px) {
+  .scroll-top-btn {
+    right: 12px;
+    bottom: 16px;
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
+}
