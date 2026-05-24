@@ -4284,3 +4284,23 @@ a.batafsil-btn {
     p, li { font-size: 14px; }
   }
 }
+
+/* ---------- Responsive: About / Contact / Info ---------- */
+@media (max-width: 992px) {
+  .AboutBody, .AboutBody2, .ContactBody, .HomeContact, .ServiceInfo {
+    .row { flex-direction: column; }
+    .col-md-6, .col-md-4, .col-md-5, .col-md-7 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    img { max-width: 100%; height: auto; }
+  }
+  .YandexMap, .YandexMapContact { width: 100%; height: 320px; }
+}
+@media (max-width: 576px) {
+  .AboutHeader h1, .ContactHeader h1, .AboutBody h2, .AboutBody2 h2,
+  .ContactBody h2, .ServiceInfo h2 { font-size: 24px; }
+  .AboutBody p, .AboutBody2 p, .ContactBody p, .ServiceInfo p { font-size: 14px; }
+  .YandexMap, .YandexMapContact { height: 260px; }
+}
