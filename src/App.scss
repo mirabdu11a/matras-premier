@@ -4339,3 +4339,29 @@ a.batafsil-btn {
 @media (max-width: 576px) {
   .Faq h2, .Comments h2 { font-size: 22px; }
 }
+
+/* ---------- Responsive: Footer ---------- */
+@media (max-width: 992px) {
+  .Footer {
+    .footer-body { gap: 32px; }
+    .b2 .d-flex { flex-wrap: wrap; gap: 24px; }
+    .footer-links { flex: 0 0 45%; }
+  }
+}
+@media (max-width: 768px) {
+  .Footer {
+    .footer-body { flex-direction: column; align-items: flex-start; }
+    .b2 .d-flex { flex-direction: column; gap: 20px; }
+    .b2__b2 { width: 100%; align-items: flex-start; }
+    .footer-socials { justify-content: flex-start; }
+  }
+}
+@media (max-width: 576px) {
+  .Footer {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    .footer-bottom { flex-direction: column; gap: 8px; font-size: 12px; }
+    .circle1, .circle2 { display: none; }
+    .f-number { font-size: 18px; }
+  }
+}
