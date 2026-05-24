@@ -1,8 +1,22 @@
 import { useTranslation } from 'react-i18next'
 import Navbar from './Navbar'
+import { useFetch } from '../api/hooks'
+import { ENDPOINTS } from '../api/endpoints'
 
-export default function ProductsHeader() {
-  const { t } = useTranslation()
+export default function ProductsHeader({ categoryId }) {
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language === 'ru' ? 'ru' : 'uz'
+
+  const { data: categories } = useFetch(ENDPOINTS.categories)
+  const category = categoryId
+    ? categories?.find((c) => String(c.id) === String(categoryId))
+    : null
+  const categoryName = category
+    ? (category[`name_${lang}`] || category.name_uz)
+    : null
+
+  const breadcrumbLabel = categoryName || t('products.breadcrumb')
+  const title = categoryName || t('products.categoriesTitle')
 
   return (
     <header className='ProductsHeader'>
@@ -14,9 +28,9 @@ export default function ProductsHeader() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M9.00884 15.5892L7.83301 14.4108L12.2405 9.99999L7.83301 5.58916L9.01217 4.41083L13.4163 8.82166C13.7288 9.13421 13.9043 9.55805 13.9043 9.99999C13.9043 10.4419 13.7288 10.8658 13.4163 11.1783L9.00884 15.5892Z" fill="#ADADAD"/>
             </svg>
-            <p>{t('products.breadcrumb')}</p>
+            <p>{breadcrumbLabel}</p>
           </div>
-          <h2>{t('products.categoriesTitle')}</h2>
+          <h2>{title}</h2>
         </div>
       </div>
     </header>
