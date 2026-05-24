@@ -4304,3 +4304,22 @@ a.batafsil-btn {
   .AboutBody p, .AboutBody2 p, .ContactBody p, .ServiceInfo p { font-size: 14px; }
   .YandexMap, .YandexMapContact { height: 260px; }
 }
+
+/* ---------- Responsive: Forms ---------- */
+@media (max-width: 768px) {
+  .Order, .ConsultationSetion {
+    .row { flex-direction: column; }
+    .col-md-6, .col-md-7, .col-md-5 { flex: 0 0 100%; max-width: 100%; }
+    form { width: 100%; }
+    input, textarea, button { width: 100%; }
+    h2 { font-size: 26px; }
+  }
+}
+@media (max-width: 576px) {
+  .Order, .ConsultationSetion {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    h2 { font-size: 22px; }
+    p { font-size: 14px; }
+  }
+}
