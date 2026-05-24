@@ -1,12 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/footerLogo.svg'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/footerLogo.svg'
 import watsap from '../assets/f-watsap.svg'
 import tg from '../assets/f-tg.svg'
 import call from '../assets/f-call.svg'
+import { useFetch } from '../api/hooks'
+import { ENDPOINTS } from '../api/endpoints'
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language === 'ru' ? 'ru' : 'uz'
+  const { data: categories } = useFetch(ENDPOINTS.categories)
 
   return (
     <footer className='Footer'>
@@ -34,13 +38,13 @@ export default function Footer() {
 
               <ul className='footer-links'>
                 <h4>{t('footer.productsTitle')}</h4>
-                <li><NavLink to="/products">{t('footer.item1')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item2')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item3')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item4')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item5')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item6')}</NavLink></li>
-                <li><NavLink to="/products">{t('footer.item7')}</NavLink></li>
+                {categories?.map((cat) => (
+                  <li key={cat.id}>
+                    <NavLink to={`/products-list/${cat.id}`}>
+                      {cat[`name_${lang}`] || cat.name_uz}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
 
