@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import arrow from '../assets/arrow.svg'
 import { useFetch } from '../api/hooks'
@@ -18,16 +19,16 @@ export default function CatalogSection() {
           {!loading && !error && categories?.length === 0 && <p>{t('common.emptyCategories')}</p>}
           {!loading && !error && categories?.map((category) => (
             <div key={category.id} className="col-md-4">
-              <div className="card1" style={category.image ? { backgroundImage: `url(${category.image})` } : {}}>
-                <div className='card-info'>
-                  <h3>{category[`name_${lang}`] || category.name_uz}</h3>
-                </div>
-                <a href="#">
+              <Link to={`/products-list/${category.id}`} className="card1-link">
+                <div className="card1" style={category.image ? { backgroundImage: `url(${category.image})` } : {}}>
+                  <div className='card-info'>
+                    <h3>{category[`name_${lang}`] || category.name_uz}</h3>
+                  </div>
                   <div className='arrow'>
                     <img src={arrow} alt="arrow" />
                   </div>
-                </a>
-              </div>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
