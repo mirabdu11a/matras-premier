@@ -4207,3 +4207,29 @@ a.batafsil-btn {
   .container { padding-left: 12px; padding-right: 12px; }
   .section-title { font-size: 24px; }
 }
+
+/* ---------- Responsive: Header + Navbar ---------- */
+@media (max-width: 992px) {
+  .Header {
+    .header-title, h1 { font-size: 40px; line-height: 1.2; }
+  }
+  .Navbar { padding-top: 12px; padding-bottom: 12px; }
+}
+@media (max-width: 768px) {
+  .Header {
+    .header-title, h1 { font-size: 32px; }
+    p { font-size: 14px; }
+  }
+  .Navbar {
+    .logo img { height: 32px; }
+  }
+}
+@media (max-width: 576px) {
+  .Header {
+    .header-title, h1 { font-size: 26px; }
+    .Header-buttons, .ctaPrimary { width: 100%; }
+  }
+  .Navbar {
+    .logo img { height: 28px; }
+  }
+}
