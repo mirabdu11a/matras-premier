@@ -4195,3 +4195,15 @@ a.batafsil-btn {
 }
 
 }
+/* ---------- Responsive: global ---------- */
+@media (max-width: 992px) {
+  .section-title { font-size: 36px; }
+}
+@media (max-width: 768px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .section-title { font-size: 30px; }
+}
+@media (max-width: 576px) {
+  .container { padding-left: 12px; padding-right: 12px; }
+  .section-title { font-size: 24px; }
+}
