@@ -4245,3 +4245,21 @@ a.batafsil-btn {
     .card1 .card-info h3 { font-size: 20px; }
   }
 }
+
+/* ---------- Responsive: PopularProducts + ProductsCards ---------- */
+@media (max-width: 1200px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 33.333%; max-width: 33.333%; }
+}
+@media (max-width: 992px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 50%; max-width: 50%; }
+}
+@media (max-width: 576px) {
+  .PopularProducts .col-md-3,
+  .ProductsCards .col-md-3 { flex: 0 0 100%; max-width: 100%; }
+  .product-card { margin-bottom: 16px; }
+  .ProductsCards .navigation { flex-wrap: wrap; }
+  .ProductsCards .navigation h5,
+  .ProductsCards .navigation p { font-size: 14px; }
+}
