@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
+
 import logo from '../assets/logo.svg'
 import languageIcon from '../assets/global-line.svg'
 import tochka from '../assets/tochka.svg'
-import { NavLink } from 'react-router-dom'
+
 import { LANG_KEY } from '../locale'
 
 function onLangChange(i18n, e) {
@@ -13,38 +16,109 @@ function onLangChange(i18n, e) {
 
 export default function Navbar() {
   const { t, i18n } = useTranslation()
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [menuOpen])
 
   return (
     <nav className='nav-bar'>
       <div className="container">
         <div className="nav-body">
+
+          {/* LEFT */}
           <div className='block1'>
             <img src={logo} alt="Matras Premier logo" />
-            <ul>
-              <li><NavLink to="/">{t('nav.home')}</NavLink></li>
-              <li><NavLink to="/products">{t('nav.products')}</NavLink></li>
-              <li><NavLink to="/about">{t('nav.about')}</NavLink></li>
-              <li><NavLink to="/contact">{t('nav.contact')}</NavLink></li>
+
+            <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
+              <li>
+                <NavLink to="/" onClick={() => setMenuOpen(false)}>
+                  {t('nav.home')}
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/products" onClick={() => setMenuOpen(false)}>
+                  {t('nav.products')}
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+                  {t('nav.about')}
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                  {t('nav.contact')}
+                </NavLink>
+              </li>
+
+              {/* MOBILE CONTACT */}
+              <div className='mobile-contact'>
+                <a href="tel:+998940644444">
+                  +998 (94) 064 44 44
+                </a>
+
+                <div className='rectangle'>
+                  <img src={tochka} alt="icon" />
+                  <span>{t('nav.warranty')}</span>
+                </div>
+
+                <button>{t('btn.order')}</button>
+              </div>
             </ul>
           </div>
 
+          {/* RIGHT */}
           <div className='block2'>
-            <div className='rectangle gap'>
+
+            <div className='rectangle gap language-box'>
               <img src={languageIcon} alt="icon" />
-              <select name="language" id="language" value={i18n.language} onChange={(e) => onLangChange(i18n, e)}>
+
+              <select
+                name="language"
+                id="language"
+                value={i18n.language}
+                onChange={(e) => onLangChange(i18n, e)}
+              >
                 <option value="uz">UZ</option>
                 <option value="ru">RU</option>
               </select>
             </div>
 
-            <div>
-              <a href="tel:+998940644444">+998 (94) 064 44 44</a>
+            <div className='desktop-contact'>
+              <a href="tel:+998940644444">
+                +998 (94) 064 44 44
+              </a>
+
               <div className='rectangle'>
-                <img src={tochka} alt="icon" /><span> {t('nav.warranty')}</span>
+                <img src={tochka} alt="icon" />
+                <span>{t('nav.warranty')}</span>
               </div>
             </div>
 
-            <button>{t('btn.order')}</button>
+            <button className='desktop-btn'>
+              {t('btn.order')}
+            </button>
+
+            {/* BURGER */}
+            <div
+              className={menuOpen ? 'burger active' : 'burger'}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? '✕' : '☰'}
+            </div>
           </div>
         </div>
       </div>

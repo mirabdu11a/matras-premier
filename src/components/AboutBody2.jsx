@@ -10,7 +10,7 @@ export default function AboutBody2() {
       <div className="container">
         <div className="row mb">
           <div className="col-md-6">
-            <img src={p2} alt="about image" />
+            <img src={p2} className='img1' alt="about image" />
           </div>
           <div className="col-md-6 info-block">
             <h3>{t('about.deliveryTitle')}</h3>

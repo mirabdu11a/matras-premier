@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import ico from "../assets/images/map.png";
 
-export default function YandexMap() {
+export default function YandexMapContact() {
   const mapRef = useRef(null);
   const mapInstance = useRef(null);
 
@@ -46,9 +46,10 @@ export default function YandexMap() {
       ref={mapRef}
       style={{
         width: "100%",
-        height: "100%",
+        height: "40vh",
         borderRadius: "20px",
         overflow: "hidden",
+        marginBottom: "6px",
       }}
     />
   );

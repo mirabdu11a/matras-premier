@@ -80,6 +80,12 @@ const translationUz = {
   order: {
     title: "Sizga mos matrasni tanlashda yordam beramiz",
   },
+  alert: {
+    succes : "Xabar muvaffaqiyatli yuborildi!",
+    fail : "Xabar yuborilmadi!",
+    error : "Xatolik yuz berdi!",
+    important : "Barcha maydonlarni to‘ldiring!"
+  },
   about: {
     breadcrumb: "Biz haqimizda",
     pageTitle: "Biz haqimizda",

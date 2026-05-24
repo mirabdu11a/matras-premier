@@ -13,7 +13,7 @@ i18n.use(initReactI18next).init({
     ru: { translation: translationRu },
   },
   lng: savedLanguage,
-  fallbackLng: 'uz',
+  fallbackLng: 'ru',
 })
 
 export default i18n

@@ -34,8 +34,8 @@ export default function LeadForm({ source = 'contact', productId = null, withMes
   }
 
   return (
-    <form onSubmit={submit}>
-      <div className="d-flex">
+    <form className='input-body2' onSubmit={submit}>
+      <div className="d-flex  gap-1">
         <label className="visually-hidden" htmlFor={`name-${source}`}>{t('form.nameLabel')}</label>
         <input id={`name-${source}`} name="name" type="text" placeholder={t('form.namePlaceholder')}
                value={form.name} onChange={change} required />

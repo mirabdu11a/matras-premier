@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import arrow from '../assets/button-arrow.svg'
 import download from '../assets/download.svg'
 import Navbar from './Navbar'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   const { t } = useTranslation()
@@ -17,7 +18,9 @@ const Header = () => {
               <h2 className='header-title'>{t('header.title')}</h2>
               <p>{t('header.subtitle')}</p>
               <div className="header-buttons">
-                <button className='first-button'>{t('header.ctaPrimary')} <img src={arrow} alt="arrow" /></button>
+                <NavLink to="/products">
+                  <button className='first-button'>{t('catalog.title')} <img src={arrow} alt="arrow" /></button>
+                </NavLink>
                 <button className='second-button'>{t('btn.downloadCatalog')} <img src={download} alt="download" /></button>
               </div>
             </div>

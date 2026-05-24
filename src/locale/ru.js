@@ -80,6 +80,12 @@ const translationRu = {
   order: {
     title: "Поможем подобрать подходящий матрас",
   },
+  alert: {
+    succes: "Сообщение успешно отправлено!",
+    fail: "Сообщение не отправлено!",
+    error: "Произошла ошибка!",
+    important: "Заполните все поля!"
+  },
   about: {
     breadcrumb: "О нас",
     pageTitle: "О нас",
