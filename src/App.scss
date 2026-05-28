@@ -561,11 +561,15 @@ body{
   }
 }
 
+
+
 .PopularProducts{
   padding: 64px 0;
 
-  .product-card{
+  .mb{
     margin-bottom: 25px;
+  }
+  .product-card{
     overflow: hidden;
     border-radius: 12px;
     border: 1px solid var(--border-primary, #E8E8E8);
@@ -2000,6 +2004,8 @@ border-radius: 20px;
       margin-bottom: 5px;
 
       .about-card{
+        height: 100%;
+
         border-radius: 12px;
         background: linear-gradient(0deg, #EEC49B 0%, #EEC49B 100%), var(--bg-secondaryStatic, #F7F7F7);
         padding: 32px;

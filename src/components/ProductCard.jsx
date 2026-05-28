@@ -8,7 +8,7 @@ export default function ProductCard({ product }) {
   const desc = product[`description_${lang}`] || product.description_uz
   const img = product.images?.[0]?.image
   return (
-    <div className="col-md-3">
+    <div className="col-md-3 mb">
       <div className="product-card">
         <img src={img} alt={name} />
         <div className="card-body">
