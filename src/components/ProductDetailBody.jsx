@@ -86,7 +86,9 @@ export default function ProductDetailBody() {
                 <h3 dangerouslySetInnerHTML={{ __html: desc }} />
 
                 {product.in_stock && (
-                  <div className="nalichi">{t('common.inStock')}</div>
+                  <div className="nalichi"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM9.92417 12.8492C9.60167 13.1717 9.1775 13.3325 8.75167 13.3325C8.32583 13.3325 7.8975 13.17 7.57167 12.845L5.25333 10.5983L6.41417 9.40083L8.74167 11.6567L13.5825 6.90583L14.7525 8.09333L9.92417 12.8492Z" fill="#00B58E"/>
+</svg> {t('common.inStock')}</div>
                 )}
 
                 <div className="form-inputs">
@@ -114,7 +116,7 @@ export default function ProductDetailBody() {
             <div className='middle-block'>
               <div className='middleInfo1'>
                 <h3>{t('products.mainFeatures')}</h3>
-                <div dangerouslySetInnerHTML={{ __html: desc }} />
+                <div className='desc' dangerouslySetInnerHTML={{ __html: desc }} />
               </div>
               <div className='middleInfo2'>
                 <h3>{t('products.contactNow')}</h3>

@@ -14,6 +14,7 @@ const translationRu = {
     downloadCatalog: "Скачать каталог",
     connect: "Связаться",
     leaveRequest: "Оставить заявку",
+    tg : "Написать в Telegram",
   },
   common: {
     loading: "Загрузка...",

@@ -14,6 +14,8 @@ const translationUz = {
     downloadCatalog: "Katalogni yuklash",
     connect: "Bog'lanish",
     leaveRequest: "Ariza qoldirish",
+    tg : "Telegramdan yozish",
+
   },
   common: {
     loading: "Yuklanmoqda...",

@@ -185,6 +185,10 @@ body{
     align-items: center;
   }
 
+  .nav-logo{
+    z-index: 999999;
+  }
+
   .block1 {
     display: flex;
     align-items: center;
@@ -302,7 +306,7 @@ body{
       right: -100%;
       width: 100%;
       height: 100vh;
-      background: #F2D3AC;
+      background: #C06321;
 
       flex-direction: column;
       align-items: flex-start;
@@ -318,11 +322,15 @@ body{
       }
 
       a {
-        color: #121212;
+        color: $white;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: 20px; /* 100% */
+
+        &.active {
+          color: #121212 !important;
+        } 
       }
 
       &.active {
@@ -338,13 +346,13 @@ body{
       width: 100%;
 
       a {
-        color: #1d1d1d;
-        font-size: 22px;
+        color: #fff;
+        font-size: 20px;
         font-weight: 700;
       }
 
       span {
-        color: #8b8b8b;
+        color: #fff;
       }
 
       button {
@@ -378,7 +386,10 @@ body{
       padding: 90px 16px 30px;
 
       a {
-        font-size: 24px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; 
       }
     }
 
@@ -646,6 +657,10 @@ body{
   .cards{
     padding: 64px 0;
   }
+
+  .mb{
+    margin-bottom: 25px;
+  }
   .product-card{
     margin-bottom: 25px;
     overflow: hidden;
@@ -827,7 +842,17 @@ body{
 
   .form-block{
     .detail-form{
-
+      .nalichi{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-icon-green, #00B58E);
+        font-family: "Golos Text";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 125%; /* 17.5px */
+      }
       h2{
         color: var(--text-icon-primary, #323232);
 
@@ -1064,6 +1089,97 @@ body{
 
         h2{
           font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .product-description{
+    margin-bottom: 6px;
+    border-radius: 20px;
+    border: 1px solid var(--border-primary, #E8E8E8);
+    background: var(--bg-primary, #FFF);
+  .product-description__top{
+      border-bottom: 1px solid var(--border-primary, #E8E8E8);
+    }
+    h4{
+      color: var(--text-icon-primary, #323232);
+      text-align: center;
+
+      /* body/14 med */
+      font-family: "Golos Text";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 125%; /* 17.5px */
+      padding: 23px 0;
+      margin: 0;
+      display: inline-block;
+      border-bottom: 4px solid #FFC20A;
+    }
+
+    .product-description__middle{
+      display: flex;
+      padding: 30px 0;
+      
+      .middle-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        .middleInfo1{
+          h3{
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 125%;
+            margin-bottom: 24px;
+          }
+
+          .desc{
+            color: var(--text-icon-primary, #323232);
+            font-family: "Golos Text";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+          }
+        } 
+        .middleInfo2{
+          width: 100%;
+          display: flex;
+          padding: 32px;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+          border-radius: 0 12px 12px 0;
+          border-left: 4px solid #FFC20A;
+          background: rgba(238, 196, 155, 0.20);
+
+          h3{
+            color: var(--text-icon-primary, #323232);
+            font-family: "Golos Text";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 24px */
+          }
+          p{
+            color: var(--text-icon-primary, #323232);
+            font-family: "Golos Text";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+          }
+          a{
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+          }
         }
       }
     }
@@ -4299,30 +4415,30 @@ a.batafsil-btn {
 }
 
 /* ---------- Responsive: Footer ---------- */
-@media (max-width: 992px) {
-  .Footer {
-    .footer-body { gap: 32px; }
-    .b2 .d-flex { flex-wrap: wrap; gap: 24px; }
-    .footer-links { flex: 0 0 45%; }
-  }
-}
-@media (max-width: 768px) {
-  .Footer {
-    .footer-body { flex-direction: column; align-items: flex-start; }
-    .b2 .d-flex { flex-direction: column; gap: 20px; }
-    .b2__b2 { width: 100%; align-items: flex-start; }
-    .footer-socials { justify-content: flex-start; }
-  }
-}
-@media (max-width: 576px) {
-  .Footer {
-    padding-top: 32px;
-    padding-bottom: 24px;
-    .footer-bottom { flex-direction: column; gap: 8px; font-size: 12px; }
-    .circle1, .circle2 { display: none; }
-    .f-number { font-size: 18px; }
-  }
-}
+// @media (max-width: 992px) {
+//   .Footer {
+//     .footer-body { gap: 32px; }
+//     .b2 .d-flex { flex-wrap: wrap; gap: 24px; }
+//     .footer-links { flex: 0 0 45%; }
+//   }
+// }
+// @media (max-width: 768px) {
+//   .Footer {
+//     .footer-body { flex-direction: column; align-items: flex-start; }
+//     .b2 .d-flex { flex-direction: column; gap: 20px; }
+//     .b2__b2 { width: 100%; align-items: flex-start; }
+//     .footer-socials { justify-content: flex-start; }
+//   }
+// }
+// @media (max-width: 576px) {
+//   .Footer {
+//     padding-top: 32px;
+//     padding-bottom: 24px;
+//     .footer-bottom { flex-direction: column; gap: 8px; font-size: 12px; }
+//     .circle1, .circle2 { display: none; }
+//     .f-number { font-size: 18px; }
+//   }
+// }
 
 /* ---------- Responsive: scroll-top-btn + Order section ---------- */
 @media (max-width: 576px) {

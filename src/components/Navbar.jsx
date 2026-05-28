@@ -37,7 +37,7 @@ export default function Navbar() {
 
           {/* LEFT */}
           <div className='block1'>
-            <img src={logo} alt="Matras Premier logo" />
+            <img className='nav-logo' src={logo} alt="Matras Premier logo" />
 
             <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
               <li>
@@ -74,8 +74,10 @@ export default function Navbar() {
                   <img src={tochka} alt="icon" />
                   <span>{t('nav.warranty')}</span>
                 </div>
+                <a  href="https://t.me/matras_premier_admin" target="_blank">
 
-                <button>{t('btn.order')}</button>
+                <button>{t('btn.tg')}</button>
+                </a>
               </div>
             </ul>
           </div>
@@ -108,13 +110,15 @@ export default function Navbar() {
               </div>
             </div>
 
-            <button className='desktop-btn'>
-              {t('btn.order')}
-            </button>
+            <a  href="https://t.me/matras_premier_admin" target="_blank">
+              <button className='desktop-btn'>
+                {t('btn.tg')}
+              </button>
+            </a>
 
             {/* BURGER */}
             <div
-              className={menuOpen ? 'burger active' : 'burger'}
+              className={menuOpen ? 'burger' : 'burger'}
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? '✕' : '☰'}
