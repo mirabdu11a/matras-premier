@@ -49,17 +49,21 @@ export default function Footer() {
             </div>
 
             <div className='b2__b2'>
-              <a className='f-number' href="tel:+998773774545">+998 77 377 45 45</a>
+              <a className='f-number' href="tel:++998940644444">+998 94 064 44 44</a>
 
               <ul className='footer-socials'>
-                <li><a href="#"><img src={watsap} alt="social-links" /></a></li>
+                <li><a href="https://www.instagram.com/matras_premier/" target='_blank'><img src={watsap} alt="social-links" /></a></li>
                 <li><a href="#"><img src={tg} alt="social-links" /></a></li>
-                <li><a href="#"><img src={call} alt="social-links" /></a></li>
               </ul>
 
               <div className='footer-location'>
-                <h4>{t('footer.filial')}</h4>
-                <p>{t('footer.workHours')}</p>
+                <h4>{t('contact.filial1')}</h4>
+                <p> <b>{t('contact.workTime')}</b>{t('contact.workHours')}</p>
+              </div>
+
+              <div className='footer-location'>
+                <h4>{t('contact.filial2')}</h4>
+                <p><b>{t('contact.workTime')}</b>{t('contact.workHours2')}</p>
               </div>
             </div>
           </div>

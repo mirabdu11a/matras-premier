@@ -39,6 +39,58 @@ body{
   max-width: 1300px;
 }
 
+.mobile-call-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  text-decoration: none;
+
+  box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+
+  animation: pulse 1.8s infinite;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-call-btn {
+    display: flex;
+  }
+}
+
 .header-title{
   color: #FFF;
   font-family: "Golos Text";
@@ -508,6 +560,9 @@ body{
   border: 1px solid var(--border-primary, #E8E8E8);
   background: var(--bg-primary, #FFF);
 
+  .card-block{
+    padding: 6px;
+  }
   .card1{
     position: relative;
     overflow: hidden;
@@ -1526,6 +1581,7 @@ border-radius: 20px;
         }
       }
       .phone{
+        
         a{
           color: var(--text-icon-primary, #323232);
           font-family: "Golos Text";
@@ -1533,6 +1589,7 @@ border-radius: 20px;
           font-style: normal;
           font-weight: 600;
           line-height: 120%; /* 38.4px */
+
         }
       }
       ul{
@@ -1829,6 +1886,7 @@ border-radius: 20px;
         }
       }
       .phone{
+        margin-bottom: 15px;
         a{
           color: var(--text-icon-primary, #323232);
           font-family: "Golos Text";
@@ -4444,7 +4502,7 @@ a.batafsil-btn {
 @media (max-width: 576px) {
   .scroll-top-btn {
     right: 12px;
-    bottom: 16px;
+    bottom: 90px;
     transform: scale(0.85);
     transform-origin: bottom right;
   }

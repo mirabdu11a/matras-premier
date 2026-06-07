@@ -18,7 +18,7 @@ export default function CatalogSection() {
           {error && <p>{t('common.error')}</p>}
           {!loading && !error && categories?.length === 0 && <p>{t('common.emptyCategories')}</p>}
           {!loading && !error && categories?.map((category) => (
-            <div key={category.id} className="col-md-4">
+            <div key={category.id} className="card-block col-md-4">
               <Link to={`/products-list/${category.id}`} className="card1-link">
                 <div className="card1" style={category.image ? { backgroundImage: `url(${category.image})` } : {}}>
                   <div className='card-info'>

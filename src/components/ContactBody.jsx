@@ -137,21 +137,27 @@ export default function ContactBody() {
         <div className="contact-info">
           <h2>{t('contact.title')}</h2>
 
-          <li className='phone'>
-            <a href="tel:+998940644444">
-              +998 94 064 44 44
-            </a>
-          </li>
+          <div className="filials">
+            <h5>{t('contact.filial1')}</h5>
+            <li className='phone'>
+              <a href="tel:+998940644444">
+                +998 94 064 44 44
+              </a>
+            </li>
+            <p><b>{t('contact.workTime')}</b> {t('contact.workHours')}</p>
 
-          <li className='phone'>
-            <a href="tel:+998773774545">
-              +998 77 377 45 45
-            </a>
-          </li>
+            <h5>{t('contact.filial2')}</h5>
+            <li className='phone'>
+              <a href="tel:+998773774545">
+                +998 77 377 45 45
+              </a>
+            </li>
+            <p><b>{t('contact.workTime')}</b> {t('contact.workHours2')}</p>
+          </div>
 
           <ul>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/matras_premier/" target='_blank'>
                 <img src={watsap} alt="social" />
               </a>
             </li>
@@ -162,18 +168,8 @@ export default function ContactBody() {
               </a>
             </li>
 
-            <li>
-              <a href="#">
-                <img src={call} alt="social" />
-              </a>
-            </li>
+            
           </ul>
-
-          <div className="filials">
-            <h5>{t('contact.filial1')}</h5>
-            <h5>{t('contact.filial2')}</h5>
-            <p>{t('contact.workHours')}</p>
-          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import img1 from '../assets/images/service.webp'
+import { NavLink } from 'react-router-dom'
 
 export default function ServiceInfo() {
   const { t } = useTranslation()
@@ -19,7 +20,10 @@ export default function ServiceInfo() {
               {t('service.description3')}
               <br /><br />
             </p>
-            <button>{t('btn.order')}</button>
+            <NavLink to="/about">
+
+              <button>{t('btn.details')}</button>
+            </NavLink>
           </div>
         </div>
 

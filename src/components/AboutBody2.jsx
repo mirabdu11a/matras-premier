@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import p1 from '../assets/images/about1.webp'
 import p2 from '../assets/images/about2.webp'
+import { NavLink } from 'react-router-dom'
 
 export default function AboutBody2() {
   const { t } = useTranslation()
@@ -45,7 +46,9 @@ export default function AboutBody2() {
                 <p>{t('about.importantItem3')}</p>
               </div>
             </div>
-            <button>{t('btn.leaveRequest')}</button>
+            <NavLink to="/contact">
+              <button>{t('btn.leaveRequest')}</button>
+            </NavLink>
           </div>
           <div className="col-md-6">
             <img src={p1} alt="about image" />
