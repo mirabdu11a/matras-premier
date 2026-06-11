@@ -163,7 +163,7 @@ export default function ContactBody() {
             </li>
 
             <li>
-              <a href="#">
+              <a href="https://t.me/matras_premier" target='_blank'>
                 <img src={tg} alt="social" />
               </a>
             </li>

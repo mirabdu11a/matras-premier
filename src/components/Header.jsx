@@ -21,7 +21,7 @@ const Header = () => {
                 <NavLink to="/products">
                   <button className='first-button'>{t('catalog.title')} <img src={arrow} alt="arrow" /></button>
                 </NavLink>
-                <button className='second-button'>{t('btn.downloadCatalog')} <img src={download} alt="download" /></button>
+                {/* <button className='second-button'>{t('btn.downloadCatalog')} <img src={download} alt="download" /></button> */}
               </div>
             </div>
           </div>

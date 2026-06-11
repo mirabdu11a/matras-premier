@@ -4,7 +4,7 @@ const translationUz = {
     products: "Mahsulotlar",
     about: "Biz haqimizda",
     contact: "Kontaktlar",
-    warranty: "5 yil garantiya",
+    warranty: "3 - 8 yil garantiya",
   },
   btn: {
     order: "Buyurtma berish",
@@ -49,11 +49,11 @@ const translationUz = {
     description2: "Biz xizmat sifatiga alohida e'tibor qaratamiz — har bir jarayon mijoz uchun qulay va tushunarli bo'lishi uchun optimallashtirilgan. Buyurtma berishdan tortib yetkazib berishgacha bo'lgan barcha bosqichlar soddalashtirilgan bo'lib, siz ortiqcha vaqt va kuch sarflamaysiz.",
     description3: "Shuningdek, biz mijozlarimizga doimiy qo'llab-quvvatlashni taklif qilamiz. Agar sizda savollar bo'lsa yoki tanlashda yordam kerak bo'lsa, mutaxassislarimiz sizga eng mos variantni tanlashda yordam beradi.",
     fastDelivery: "Tez yetkazib berish",
-    fastDeliveryDesc: "Buyurtmalaringizni qisqa muddat ichida eshigingizgacha yetkazib beramiz",
+    fastDeliveryDesc: "Toshkent bo'ylab yetkazib berish bepul 1-3 kungacha yetkazib beramiz",
     installation: "O'rnatish va yordam",
     installationDesc: "Zarurat bo'lsa, mahsulotni joylashtirish va o'rnatishda yordam beramiz",
     warranty: "Kafolat va ishonch",
-    warrantyDesc: "Barcha mahsulotlarimizga kafolat beriladi va sifat doim nazorat ostida",
+    warrantyDesc: "Barcha mahsulotlarimizga 3-8 yilgacha kafolat beriladi va sifat doim nazorat ostida",
   },
   consultation: {
     topInfo: "Premium komfort sizga yaqin",
@@ -63,8 +63,8 @@ const translationUz = {
   },
   contact: {
     title: "Kontakt ma'lumotlari",
-    filial1: "Olim polvon filiya",
-    filial2: "Maxtumquli filal",
+    filial1: " Sergeli Olim polvon filial",
+    filial2: "Maxtumquli filial",
     workHours2: "Du–Ya: 10:00 – 20:00",
     workHours: "Du–Ya: 09:00 – 20:00",
     workTime : "Ish vaqti: ",

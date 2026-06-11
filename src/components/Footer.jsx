@@ -53,7 +53,7 @@ export default function Footer() {
 
               <ul className='footer-socials'>
                 <li><a href="https://www.instagram.com/matras_premier/" target='_blank'><img src={watsap} alt="social-links" /></a></li>
-                <li><a href="#"><img src={tg} alt="social-links" /></a></li>
+                <li><a href="https://t.me/matras_premier" target='_blank'><img src={tg} alt="social-links" /></a></li>
               </ul>
 
               <div className='footer-location'>

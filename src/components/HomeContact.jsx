@@ -15,19 +15,27 @@ export default function HomeContact() {
       <div className='HomeContactBody'>
         <div className="contact-info">
           <h2>{t('contact.title')}</h2>
-          <li className='phone'><a href="tel:+998940644444">+998 94 064 44 44</a></li>
-          <li className='phone'><a href="tel:+998773774545">+998 77 377 45 45</a></li>
           <ul>
-            <li><a href="#"><img src={watsap} alt="social" /></a></li>
-            <li><a href="#"><img src={tg} alt="social" /></a></li>
-            <li><a href="#"><img src={call} alt="social" /></a></li>
+            <li><a href="https://www.instagram.com/matras_premier/" target='_blank'><img src={watsap} alt="social" /></a></li>
+            <li><a href="https://t.me/matras_premier" target='_blank'><img src={tg} alt="social" /></a></li>
           </ul>
 
           <div className="filials">
             <h5>{t('contact.filial1')}</h5>
+            <li className='phone'>
+              <a href="tel:+998940644444">
+                +998 94 064 44 44
+              </a>
+            </li>
+            <p><b>{t('contact.workTime')}</b> {t('contact.workHours')}</p>
+
             <h5>{t('contact.filial2')}</h5>
-            <p>{t('contact.workHours')}</p>
-            <button>{t('btn.connect')}</button>
+            <li className='phone'>
+              <a href="tel:+998773774545">
+                +998 77 377 45 45
+              </a>
+            </li>
+            <p><b>{t('contact.workTime')}</b> {t('contact.workHours2')}</p>
           </div>
         </div>
       </div>

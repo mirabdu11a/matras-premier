@@ -83,7 +83,14 @@ export default function ProductDetailBody() {
               <div className="detail-form">
                 <h2>{name}</h2>
 
-                {/* <h3 dangerouslySetInnerHTML={{ __html: desc }} /> */}
+                <h3 dangerouslySetInnerHTML={{ __html: desc }} />
+                {parseFloat(product.price) > 0 && (
+                  <div className="product-price">
+                    <span>
+                      {parseFloat(product.price).toLocaleString('uz-UZ')} UZS
+                    </span>
+                  </div>
+                )}
 
                 {product.in_stock && (
                   <div className="nalichi mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -117,6 +124,13 @@ export default function ProductDetailBody() {
               <div className='middleInfo1'>
                 <h3>{t('products.mainFeatures')}</h3>
                 <div className='desc' dangerouslySetInnerHTML={{ __html: desc }} />
+                {parseFloat(product.price) > 0 && (
+                  <div className="product-price">
+                    <span>
+                      {parseFloat(product.price).toLocaleString('uz-UZ')} UZS
+                    </span>
+                  </div>
+                )}
               </div>
               <div className='middleInfo2'>
                 <h3>{t('products.contactNow')}</h3>

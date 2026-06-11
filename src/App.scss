@@ -794,6 +794,17 @@ body{
     border-bottom: 1px solid var(--border-primary, #E8E8E8);
   }
 
+  .product-price {
+    margin: 8px 0 16px;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+    }
+  }
+
   .navigation{
     display: flex;
     align-items: center;
@@ -1044,6 +1055,16 @@ body{
   background: var(--bg-primary, #FFF);
  .product-description__top{
     border-bottom: 1px solid var(--border-primary, #E8E8E8);
+  }
+  .product-price {
+    margin: 8px 0 16px;
+
+    span {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+    }
   }
   h4{
     padding: 23px 0;
@@ -1362,6 +1383,7 @@ body{
     .premushestva-card{
       display: flex;
       padding: 32px;
+      height: 100%;
       flex-direction: column;
       text-align: center;
       gap: 12px;
