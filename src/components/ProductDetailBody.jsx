@@ -84,11 +84,9 @@ export default function ProductDetailBody() {
                 <h2>{name}</h2>
 
                 <h3 dangerouslySetInnerHTML={{ __html: desc }} />
-                {parseFloat(product.price) > 0 && (
+                {product.price && (
                   <div className="product-price">
-                    <span>
-                      {parseFloat(product.price).toLocaleString('uz-UZ')} UZS
-                    </span>
+                    <span>{product.price}</span>
                   </div>
                 )}
 
@@ -124,11 +122,9 @@ export default function ProductDetailBody() {
               <div className='middleInfo1'>
                 <h3>{t('products.mainFeatures')}</h3>
                 <div className='desc' dangerouslySetInnerHTML={{ __html: desc }} />
-                {parseFloat(product.price) > 0 && (
+                {product.price && (
                   <div className="product-price">
-                    <span>
-                      {parseFloat(product.price).toLocaleString('uz-UZ')} UZS
-                    </span>
+                    <span>{product.price}</span>
                   </div>
                 )}
               </div>

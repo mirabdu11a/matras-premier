@@ -140,16 +140,17 @@ export default function ContactBody() {
           <div className="filials">
             <h5>{t('contact.filial1')}</h5>
             <li className='phone'>
-              <a href="tel:+998940644444">
-                +998 94 064 44 44
+              <a href="tel:+998773774545">
+                +998 77 377 45 45
               </a>
             </li>
             <p><b>{t('contact.workTime')}</b> {t('contact.workHours')}</p>
 
             <h5>{t('contact.filial2')}</h5>
             <li className='phone'>
-              <a href="tel:+998773774545">
-                +998 77 377 45 45
+              
+              <a href="tel:+998940644444">
+                +998 94 064 44 44
               </a>
             </li>
             <p><b>{t('contact.workTime')}</b> {t('contact.workHours2')}</p>

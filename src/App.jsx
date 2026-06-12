@@ -58,7 +58,7 @@ function App() {
 
       <Footer />
 
-      <a href="tel:+998901234567" className="mobile-call-btn">
+      <a href="tel:+998940644444" className="mobile-call-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"
